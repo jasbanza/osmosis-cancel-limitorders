@@ -11,7 +11,7 @@ const CONTRACT =
   "osmo1slqv7yv45v4k3ccrvwv24u2scqn6hyrut7j5m69ygw3j66ayqnesxemawx";
 const RPC_ARCHIVE = "https://rpc.archive.osmosis.zone";
 const RPC_BROADCAST = "https://rpc.osmosis.zone:443";
-const LCD_ENDPOINT = "https://rest-osmosis.ecostake.com";
+const LCD_ENDPOINT = "https://lcd.osmosis.zone";
 const CHAIN_ID = "osmosis-1";
 const EXPLORER_TX = "https://www.mintscan.io/osmosis/tx/";
 
