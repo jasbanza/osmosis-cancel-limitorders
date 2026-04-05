@@ -9,7 +9,8 @@ const { MsgExecuteContract } = cosmwasm.wasm.v1;
 
 const CONTRACT =
   "osmo1slqv7yv45v4k3ccrvwv24u2scqn6hyrut7j5m69ygw3j66ayqnesxemawx";
-const RPC_ENDPOINT = "https://rpc.archive.osmosis.zone";
+const RPC_ARCHIVE = "https://rpc.archive.osmosis.zone";
+const RPC_BROADCAST = "https://rpc.osmosis.zone:443";
 const LCD_ENDPOINT = "https://rest-osmosis.ecostake.com";
 const CHAIN_ID = "osmosis-1";
 const EXPLORER_TX = "https://www.mintscan.io/osmosis/tx/";
@@ -121,7 +122,7 @@ async function fetchPlaceLimitTxs(sender) {
   const query = encodeURIComponent(
     `message.sender='${sender}'`
   );
-  const url = `${RPC_ENDPOINT}/tx_search?query=%22${query}%22&page=1&per_page=100&order_by=%22desc%22`;
+  const url = `${RPC_ARCHIVE}/tx_search?query=%22${query}%22&page=1&per_page=100&order_by=%22desc%22`;
 
   try {
     const res = await fetch(url);
@@ -313,7 +314,7 @@ async function cancelSelectedOrders() {
   try {
     const offlineSigner = await window.getOfflineSignerAuto(CHAIN_ID);
     const client = await getSigningCosmwasmClient({
-      rpcEndpoint: RPC_ENDPOINT,
+      rpcEndpoint: RPC_BROADCAST,
       signer: offlineSigner,
     });
 
