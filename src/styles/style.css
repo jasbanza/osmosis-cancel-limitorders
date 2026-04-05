@@ -345,13 +345,8 @@ footer {
 }
 
 footer a {
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-footer a:hover {
-  color: var(--primary);
+  color: var(--text);
+  text-decoration: underline;
 }
 
 @media (max-width: 640px) {
