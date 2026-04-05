@@ -9,7 +9,7 @@ const { MsgExecuteContract } = cosmwasm.wasm.v1;
 
 const CONTRACT =
   "osmo1slqv7yv45v4k3ccrvwv24u2scqn6hyrut7j5m69ygw3j66ayqnesxemawx";
-const LCD_ENDPOINT = "https://rest-osmosis.ecostake.com";
+const LCD_ENDPOINT = "https://lcd.osmosis.zone";
 const RPC_BROADCAST = "https://rpc.osmosis.zone:443";
 const RPC_ARCHIVE = "https://rpc.archive.osmosis.zone";
 const CHAIN_ID = "osmosis-1";
