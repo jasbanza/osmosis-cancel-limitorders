@@ -337,6 +337,23 @@ tbody td:first-child input {
   font-size: 0.9rem;
 }
 
+footer {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: var(--primary);
+}
+
 @media (max-width: 640px) {
   #app {
     padding: 1rem;
