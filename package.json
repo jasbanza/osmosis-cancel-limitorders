@@ -1,0 +1,31 @@
+{
+  "name": "osmosis-cancel-limitorders",
+  "version": "1.0.0",
+  "description": "Look up and cancel Osmosis limit orders",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "copy": "node scripts/copy.js",
+    "dist": "npm run build && npm run copy",
+    "dev": "concurrently \"nodemon --watch src/index.js --exec npm run build\" \"http-server docs -p 8080 -c-1\"",
+    "serve": "http-server docs -p 8080 -c-1"
+  },
+  "keywords": [
+    "osmosis",
+    "limit-orders",
+    "cancel",
+    "cosmos",
+    "dapp"
+  ],
+  "author": "Jason",
+  "license": "MIT",
+  "dependencies": {
+    "osmojs": "^16.15.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "esbuild": "^0.28.0",
+    "http-server": "^14.1.1",
+    "nodemon": "^3.1.0"
+  }
+}

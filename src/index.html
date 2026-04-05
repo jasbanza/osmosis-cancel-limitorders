@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Osmosis Limit Order Manager</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Osmosis Limit Order Manager</h1>
+        <p class="subtitle">View and cancel limit orders on Osmosis orderbook</p>
+      </header>
+
+      <section class="wallet-section">
+        <div class="input-group">
+          <label for="walletAddress">Wallet Address</label>
+          <div class="input-row">
+            <input
+              type="text"
+              id="walletAddress"
+              placeholder="osmo1..."
+              value="osmo12gdehwwv8eusdzwszpx2yt522cnun74ychvdpg"
+            />
+            <button id="btnLoadOrders" class="btn btn-primary">Load Orders</button>
+          </div>
+        </div>
+        <div class="wallet-controls">
+          <button id="btnConnectKeplr" class="btn btn-secondary">Connect Keplr</button>
+          <span id="keplrStatus" class="status-badge status-disconnected">Not connected</span>
+        </div>
+      </section>
+
+      <section id="ordersSection" class="orders-section hidden">
+        <div class="orders-header">
+          <h2>Active Orders <span id="orderCount" class="badge">0</span></h2>
+          <div class="orders-actions">
+            <button id="btnSelectAll" class="btn btn-small">Select All</button>
+            <button id="btnCancelSelected" class="btn btn-danger" disabled>Cancel Selected</button>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table id="ordersTable">
+            <thead>
+              <tr>
+                <th class="col-check"><input type="checkbox" id="checkAll" /></th>
+                <th>Order ID</th>
+                <th>Direction</th>
+                <th>Quantity</th>
+                <th>Tick ID</th>
+                <th>Placed At</th>
+                <th>TX</th>
+              </tr>
+            </thead>
+            <tbody id="ordersBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="statusSection" class="status-section">
+        <div id="statusPanel" class="status-panel hidden"></div>
+      </section>
+
+      <div id="loadingMask" class="loading-mask hidden">
+        <div class="spinner"></div>
+        <p id="loadingText">Loading...</p>
+      </div>
+    </div>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>
